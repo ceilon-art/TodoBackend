@@ -1,12 +1,16 @@
 import express from 'express';
-import TodosController from './controllers/TodosController';
+import ShowTodosController from './controllers/ShowTodosController';
+import CreateTodosController from './controllers/CreateTodosController';
+import DeleteTodosController from './controllers/DeleteTodosController';
 
 const routes = express.Router();
 
-const TodoController = new TodosController();
+const showTodoController = new ShowTodosController();
+const createTodoController = new CreateTodosController();
+const deleteTodoController = new DeleteTodosController();
 
-routes.get('/todos', TodoController.index );
-routes.post('/todos', TodoController.create );
-routes.delete('/todos', TodoController.delete );
+routes.get('/todos', showTodoController.index );
+routes.post('/create', createTodoController.create );
+routes.delete('/delete', deleteTodoController.delete );
 
 export default routes;
