@@ -8,4 +8,4 @@ app.use(cors());
 app.use(express.json()); // Faz com que o express entenda JSON
 app.use(routes);
 
-app.listen(3333);
+app.listen(process.env.PORT || 3333);
