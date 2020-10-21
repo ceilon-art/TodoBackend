@@ -9,7 +9,7 @@ const showTodoController = new ShowTodosController();
 const createTodoController = new CreateTodosController();
 const deleteTodoController = new DeleteTodosController();
 
-routes.get('/todos', showTodoController.index );
+routes.get('/', showTodoController.index );
 routes.post('/create', createTodoController.create );
 routes.delete('/delete', deleteTodoController.delete );
 
